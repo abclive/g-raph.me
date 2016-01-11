@@ -1,27 +1,119 @@
 extends layout.jade
 
 block content
-  .container#branding
-    .grid-4#title
-      h1 Raphaël Astier
-      h4 Developpeur - Web - Jeux Vidéos
-    .grid-6#skills
-      .label-list
-        h5 Langages
-        p.label PHP 5/7
-        p.label Javascript (ES2015)
-        p.label MySQL
-        p.label Typescript
-        p.label C/C++
-        p.label C#
-        p Java, Python, Dart, Jade, Stylus, LESS ...
-      .label-list
-        h5 Frameworks
-        p.label Laravel 5
-        p.label CakePHP
-        p.label Unity 3D
-        p.label Unreal Engine 4
-        p Bootstrap, Symfony 2, Wordpress, Node, Electron ...
-      .label-list
-        h5 Divers
-        p Terminal Unix, Adobe Creative Suite, Git
+  #branding-background
+    .container#branding
+      .grid-4#title
+        h1 Raphaël Astier
+        h4 Developpeur - Web - Jeux Vidéos
+        p.
+          20 ans, passioné par la technologie mais aussi par le cinéma, la musique
+          et l'art de manière générale. J'aime apporter une touche artistique à
+          mes projets et méler mes passions.
+        p: a(href="#") Voir mon CV
+      .grid-6#skills
+        .label-list
+          h5 Langages
+          p.label PHP 5/7
+          p.label Javascript (ES2015)
+          p.label MySQL
+          p.label Typescript
+          p.label C/C++
+          p.label C#
+          p Java, Python, Dart, Jade, Stylus, LESS ...
+        .label-list
+          h5 Frameworks
+          p.label Laravel 5
+          p.label CakePHP
+          p.label Unity 3D
+          p.label Unreal Engine 4
+          p Bootstrap, Symfony 2, Wordpress, Node, Electron ...
+        .label-list
+          h5 Divers
+          p Terminal Unix, Adobe Creative Suite, Git
+        
+block portfolio
+  .white-background#portfolio-background
+    .container.center#portfolio
+      .grid-10
+        h1 Mes créations
+        p Quelques uns des projets sur lesquels j'ai pu travaillé
+      .grid-3
+        article.portfolio-element
+          .portfolio-hover
+            h5 Nom du projet
+            p.
+              Résumé assez court et concis du projet pour expliquer le
+              pourquoi du comment.
+            a(href="#") En savoir plus
+          img(src="http://placehold.it/300x200")
+      .grid-3
+        article.portfolio-element
+          .portfolio-hover
+            h5 Nom du projet
+            p.
+              Résumé assez court et concis du projet pour expliquer le
+              pourquoi du comment.
+            a(href="#") En savoir plus
+          img(src="http://placehold.it/300x200")
+      .grid-3
+        article.portfolio-element
+          .portfolio-hover
+            h5 Nom du projet
+            p.
+              Résumé assez court et concis du projet pour expliquer le
+              pourquoi du comment.
+            a(href="#") En savoir plus
+          img(src="http://placehold.it/300x200")
+      .grid-3
+        article.portfolio-element
+          .portfolio-hover
+            h5 Nom du projet
+            p.
+              Résumé assez court et concis du projet pour expliquer le
+              pourquoi du comment.
+            a(href="#") En savoir plus
+          img(src="http://placehold.it/300x200")
+      .grid-3
+        article.portfolio-element
+          .portfolio-hover
+            h5 Nom du projet
+            p.
+              Résumé assez court et concis du projet pour expliquer le
+              pourquoi du comment.
+            a(href="#") En savoir plus
+          img(src="http://placehold.it/300x200")
+      .grid-3
+        article.portfolio-element
+          .portfolio-hover
+            h5 Nom du projet
+            p.
+              Résumé assez court et concis du projet pour expliquer le
+              pourquoi du comment.
+            a(href="#") En savoir plus
+          img(src="http://placehold.it/300x200")
+              
+block contact
+  #contact-background
+    .container.center#contact
+      .grid-10
+        h1 Me contacter
+      .grid-4
+        h3 Formulaire de contact
+        form.contact-form(method="post")
+          .form-group
+            input(type="text", placeholder="Votre nom", name="name" required)
+          .form-group
+            input(type="email", placeholder="Votre e-mail", name="email" required)
+          .form-group
+            input(type="text", placeholder="L'objet de votre message", name="object", required)
+          .form-group
+            textarea(name="content", required)
+          input(type="submit", value="Envoyer le message")
+      .grid-10
+        h3 Sur les réseaux sociaux
+        p
+          a(href="https://twitter.com/abcliveFR") Twitter
+          a(href="https://fr.linkedin.com/in/raphaelastier") LinkedIn
+          a(href="https://github.com/abclive") Github
+        
